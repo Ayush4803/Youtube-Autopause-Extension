@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Auto Pause and Play",
+    "version": "1.0",
+    "description": "Automatically pauses and plays YouTube videos when switching tabs.",
+    "permissions": ["tabs", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
